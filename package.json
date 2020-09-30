@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-brands-svg-icons": "^5.15.0",
+    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap-4-react": "0.0.59",
     "meteor-node-stubs": "^1.0.1",
     "react": "^16.13.1",

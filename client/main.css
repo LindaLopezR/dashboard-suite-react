@@ -1,7 +1,22 @@
 @import "./styles/general.less";
+@import "./styles/components.less";
+
+@font-face {
+  src: url("/fonts/Roboto-Regular.ttf");
+  font-family: regular;
+}
+
+@font-face {
+  src: url("/fonts/RobotoCondensed-Regular.ttf");
+  font-family: roboto-condensada;
+}
 
 body {
   padding: 10px;
   background-color: rgb(239, 239, 239)!important;
-  font-family: sans-serif;
+  font-family: regular!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: roboto-condensada!important;
 }

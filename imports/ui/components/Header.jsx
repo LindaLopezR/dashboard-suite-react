@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, Button, Dropdown, Form, Collapse } from 'bootstrap-4-react';
+import { Link } from 'react-router-dom';
+import { Navbar, Nav, Dropdown, Collapse } from 'bootstrap-4-react';
 
 export default Header = () => {
     return (
@@ -9,30 +10,23 @@ export default Header = () => {
         </Navbar.Brand>
         <Navbar.Toggler target="#navbarSupportedContent" />
         <Collapse navbar id="navbarSupportedContent">
-          <Navbar.Nav mr="auto">
-            <Nav.Item active>
-              <Nav.Link href="#">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#">Link</Nav.Link>
-            </Nav.Item>
+          <Navbar.Nav mr="auto" />
+          <Navbar.Nav my="2 lg-0">
             <Nav.Item dropdown>
-              <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+              <Nav.Link dropdownToggle>Menú</Nav.Link>
               <Dropdown.Menu>
-                <Dropdown.Item>Action</Dropdown.Item>
-                <Dropdown.Item>Another action</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item>Something else</Dropdown.Item>
+                <Link to="/" className="dropdown-item">
+                  <i className="fa fa-dashboard"/> Dashboard
+                </Link>
+                <Link to="/statistics" className="dropdown-item">
+                  <i className="fa fa-bar-chart"/> Statistics
+                </Link>
               </Dropdown.Menu>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link disabled>Disabled</Nav.Link>
+            <Nav.Item mr="3" ml="3">
+              <Nav.Link disabled>Salir</Nav.Link>
             </Nav.Item>
           </Navbar.Nav>
-          <Form inline my="2 lg-0">
-            <Form.Input type="search" placeholder="Search" mr="sm-2" />
-            <Button outline success my="2 sm-0">Search</Button>
-          </Form>
         </Collapse>
       </Navbar>
     )

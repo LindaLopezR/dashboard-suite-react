@@ -1,0 +1,64 @@
+@import './variables.less';
+
+// --- CardTag ---
+// ----------------
+.cardTag {
+    border-radius: 0.85rem!important;
+    .header-cardTag {
+        border-top-right-radius: 0.85rem!important;
+        border-top-left-radius: 0.85rem!important;
+        background-color: @teal-color!important;
+        font-family: roboto-condensada!important;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+
+// --- CardInfo ---
+// ----------------
+.item-listCard {
+    display: flex;
+    .content-cards {
+        flex: 9;
+        .content-infoCards {
+            flex: 9!important;
+            div.card:first-child {
+                background-color: @teal-color;
+                h4 {
+                    color: white;
+                }
+            }
+        }
+    }
+    .content-remove {
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background: transparent;
+        border: 1px solid rgb(234, 42, 42);
+        color: rgb(234, 42, 42);
+        height: auto;
+        margin: 1.5rem 0 1rem;
+        &:hover {
+            background-color: rgba(234, 42, 42, 0.57);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .item-listCard .content-remove {
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .item-listCard .content-remove {
+        margin: 1.5rem 0 2rem;
+    }
+}

@@ -10,6 +10,7 @@ import Header from '../components/Header';
 
 //   Pages
 import Dashboard from '../pages/dashboard/Dashboard';
+import Statistics from '../pages/statistics/Statistics';
 
 export default function MainLayout() {
     
@@ -19,6 +20,7 @@ export default function MainLayout() {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Dashboard} />
+                    <Route exact path="/statistics" component={Statistics} />
                 </Switch>
             </div>
         </Router>
